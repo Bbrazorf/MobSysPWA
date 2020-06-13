@@ -1,8 +1,7 @@
+import './main.scss'; 
 const worker = new Worker('./worker.js');
 const canvas = document.querySelector('canvas');
-canvas.height = 100;
-canvas.width = 100;
-const offScreenCanvas = offscreenCanvas = 'OffscreenCanvas' in window ? canvas.transferControlToOffscreen() : canvas;
+const offscreenCanvas = document.querySelector('canvas').transferControlToOffscreen(); 
 
 const cHeight = canvas.height;
 const cWidth = canvas.width;
@@ -23,7 +22,7 @@ worker.postMessage({msg: 'init', canvas: offscreenCanvas}, [offscreenCanvas]);
 
 function draw() {
     audioCtx.resume();
-    drawVisual = requestAnimationFrame(draw);
+    let drawVisual = requestAnimationFrame(draw);
 
     analyser.getByteFrequencyData(dataArray);
 

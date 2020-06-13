@@ -4,23 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Frequencies visualizer</title>
-    <link rel="stylesheet" href="/main.39afc03c.css">
-    <link rel="manifest" href="/manifest.webmanifest">
-<script src="/main.39afc03c.js"></script></head>
+    <link rel="stylesheet" href="main.css"/>
+    <link rel="manifest" href="manifest.webmanifest">
+    <script>
+        window.addEventListener('load', () => {
+            navigator.serviceWorker.register('/sw.js');
+        });
+    </script>
+</head>
 <body>
     <div class="canvas_container">
-        <canvas height="100" width="100">
+        <canvas height=100 width=100>
 
         </canvas>
-        <audio controls="controls" preload="">
+        <audio controls="controls" preload>
             Il tuo browser non supporta l'elemento <code>audio</code>.
-            <source src="/audio_sample.104912d9.mp3">
+            <source src="./resources/audio_sample.mp3">
         </audio> 
     </div>
     <div class="audio_container">
            
     </div>
     
-    <script src="/main.1f19ae8e.js"></script>
+    <script src=main.js></script>
 </body>
 </html>

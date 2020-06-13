@@ -1,11 +1,13 @@
 {
-  "name": "mandelbrot",
+  "name": "frequencies_visualizer",
   "version": "1.0.0",
   "description": "",
   "main": "main.js",
   "scripts": {
     "serve": "parcel serve index.html",
-    "test": "jest --watchAll"
+    "test": "jest --watchAll",
+    "build": "npx parcel build ./main.js",
+    "start": "http-server -c-1 dist"
   },
   "author": "",
   "license": "ISC",
@@ -15,5 +17,9 @@
     "jest": "^26.0.1",
     "parcel-bundler": "^1.12.4",
     "sass": "^1.25.0"
+  },
+  "dependencies": {
+    "http-server": "^0.12.3",
+    "workbox-cli": "^5.1.3"
   }
 }
